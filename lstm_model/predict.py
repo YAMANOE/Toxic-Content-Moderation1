@@ -24,6 +24,7 @@ try:
 except FileNotFoundError:
     MAX_LEN = 151
 
+
 def predict_text(text):
     seq = tokenizer.texts_to_sequences([text])
     padded = pad_sequences(seq, maxlen=MAX_LEN, padding='post')
